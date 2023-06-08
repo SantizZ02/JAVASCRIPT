@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/samu.png">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/juegos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>PRODUCTOS</title>
+</head>
+<body>
+    <div class="container">
+    <h1 class="col-12">Productos</h1>
+    <button id="bot_tarjetas" onclick="seleccioncarro('tarjetas')" class="botones_opciones">TARJETAS</button>
+    <button id="botcarro"onclick="seleccioncarro('tabla_carrito')" class="botones_opciones">CARRITO</button>
+    <header>
+        <img id="logo" src="../img/samu.png" alt="logo">
+        
+        <nav class="barranavegacion">
+                <a class="menu" href="../principal.html">INICIO</a>
+                <a class="menu" href="juegos.html">PRODUCTOS</a>
+                <a id="login" class="sesion" href="../html/login.html">INGRESAR</a>
+                <a id="sign" class="sesion" href="sign.html">REGISTRARSE</a>
+        </nav>
+    </header>
+    <div id="filtrar" class="col-12 opciones tarjetas">
+        <h2 id="actfiltrar" style="cursor: pointer;" class="col-12" onclick="actfiltro()">Filtrar</h2> </div>
+    <div id="divfiltros" hidden>
+    <ol id="filtros" class="col-12" >
+        <li>
+            <button id="juego" style="cursor: pointer;" class="filtro active" onclick="seleccionfiltro('juego')">Todos</button>
+        </li>
+        <li>
+            <button id="accion" style="cursor: pointer;" class="filtro" onclick="seleccionfiltro('accion')">Accion</button>
+        </li>
+        <li>
+            <button id="multijugador" style="cursor: pointer;" class="filtro" onclick="seleccionfiltro('multijugador')">Multijugador</button>
+        </li>
+        <li>
+            <button id="carreras" style="cursor: pointer;" class="filtro" onclick="seleccionfiltro('carreras')">Carreras</button>
+        </li>
+    </ol>
+    </div>
+    <ul class="opciones tarjetas col-12">
+        <li class="juego accion multijugador">
+            <div >
+                <img class="img_juego" src="../img/torre1.jpg" alt="halo">
+                <h2 class="nom_juego">
+                     TORRE 
+                </h2>
+                <h3 class="pre_juego">
+                    <b> $80000</b>
+                </h3>
+                <button class="bot_agcarrito" >Agregar al carrito</button>
+            </div>
+        </li>
+
+        <li  class="juego accion">
+            <div>
+                <img class="img_juego" src="../img/procesador2.jpg" alt="viego">
+                <h2 class="nom_juego">
+                    PROCESADORES
+                </h2>
+                <h3 class="pre_juego">
+                    <b> $500000</b>
+                </h3>
+                <button class="bot_agcarrito">Agregar al carrito</button>
+            </div>
+        </li>
+
+        <li class="juego carreras multijugador">
+            <div>
+                <img class="img_juego" src="../img/tarjeta3.jpg" alt="TARJETA MADRE">
+                <h2 class="nom_juego">
+                     TARJETAS DE VIDEO
+                </h2>
+                <h3 class="pre_juego">
+                   <b> $250000</b>
+                </h3>
+                <button class="bot_agcarrito">Agregar al carrito</button>
+            </div>
+        </li>
+
+        <li class="juego accion multijugador">
+            <div>
+                <img class="img_juego" src="../img/perifericos2.jpg" alt="PERIFERICOS">
+                <h2 class="nom_juego">
+                    PERIFERICOS
+                <h3 class="pre_juego">
+                    <b> $150000</b>
+                </h3>
+                <button class="bot_agcarrito">Agregar al carrito</button>
+            </div>
+        </li>
+
+        <li class="juego accion multijugador">
+            <div >
+                <img class="img_juego" src="../img/consolaxbox.jpg" alt="lol">
+                <h2 class="nom_juego">
+                    CONSOLAS 
+                </h2>
+                <h3 class="pre_juego">
+                    <b> $2000000</b>
+                </h3>
+                <button class="bot_agcarrito">Agregar al carrito</button>
+            </div>
+        </li>
+
+        <li class="juego multijugador">
+            <div >
+                <img class="img_juego" src="../img/accesorios.jpg" alt="mondongo">
+                <h2 class="nom_juego">
+                    ACCESORIOS PARA CELULARES , TABLETS Y LAPTOPS
+                </h2>
+                <h3 class="pre_juego">
+                    <b> $20000</b>
+                </h3>
+                <button class="bot_agcarrito">Agregar al carrito</button>
+            </div>
+        </li>
+    </ul>
+    <div class="opciones tabla_carrito ocultas">
+        <table class="table">
+
+            <tr class="fila">
+          
+              <td ><span>#</span></td>
+          
+              <td class="producto"><span>Producto</span></td>
+          
+              <td ><span>Cantidad</span></td>
+
+              <td ><span>Precio unitario</span></td>
+
+              <td ><span>Subtotal</span></td>
+
+              <td ><span></span></td>
+          
+            </tr>
+        <tbody id="tbody">
+        </tbody>
+        </table>
+        <div id="seccion_total">
+            <div style="font-size: 2rem;">
+                <p>Total a pagar es: </p>
+                <p id="PAGO"></p>
+            </div>
+            <button id="bot_calcular" >Calcular total a pagar</button>
+        </div>
+    </div>
+    </div>
+    <footer class="col-12">
+        <p><i>Derechos reservados &copy; 2023 Santiago Sanchez y Andres Olarte</i></p>
+    </footer>
+</body>
+
+<script src="../js/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="../js/barmenu.js"></script>
+<script src="../js/filtro.js"></script>
+<script src="../js/carrito.js"></script>
+</html>
